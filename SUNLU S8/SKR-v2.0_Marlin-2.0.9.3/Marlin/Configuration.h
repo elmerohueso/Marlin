@@ -600,9 +600,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp 26.0008 // Custom values
-    #define DEFAULT_Ki 2.1960 // Custom values
-    #define DEFAULT_Kd 76.9623 // Custom values
+    #define DEFAULT_Kp 42.65 // Custom values
+    #define DEFAULT_Ki 5.03 // Custom values
+    #define DEFAULT_Kd 90.42 // Custom values
   #endif
 #endif // PIDTEMP
 
@@ -639,9 +639,9 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  #define DEFAULT_bedKp 275.1206 // Custom values
-  #define DEFAULT_bedKi 51.3285 // Custom values
-  #define DEFAULT_bedKd 983.0978 // Custom values
+  #define DEFAULT_bedKp 305.33 // Custom values
+  #define DEFAULT_bedKi 60.58 // Custom values
+  #define DEFAULT_bedKd 1025.91 // Custom values
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -715,7 +715,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 300
+#define EXTRUDE_MAXLENGTH 200
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -925,7 +925,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 150 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 143 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1620,7 +1620,7 @@
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
-    //#define EXTRAPOLATE_BEYOND_GRID
+    #define EXTRAPOLATE_BEYOND_GRID
 
     //
     // Experimental Subdivision of the grid by Catmull-Rom method.
